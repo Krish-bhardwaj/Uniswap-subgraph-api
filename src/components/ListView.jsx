@@ -7,14 +7,14 @@ const POOLS_QUERY = gql`
       pools(orderBy:totalValueLockedUSD orderDirection:desc){
         id,
         token0{
+          id,
           name,
           symbol,
-          txCount,
         }
         token1{
+          id,
           name,
           symbol,
-          txCount,
         }
         totalValueLockedUSD,
       }
@@ -44,13 +44,13 @@ const ListView = () => {
                   <b>Token 0</b>
                   <div><b>Name : </b>{pool.token0.name}</div>
                   <div><b>Symbol : </b>{pool.token0.symbol}</div>
-                  <div><b>Transcation Count : </b>{pool.token0.txCount}</div>
+                  <div><b>ID : </b>{pool.token0.id}</div>
                 </div>
                 <div className="self-end flex-1 flex flex-col">
                   <b>Token 1</b>
                   <div><b>Name : </b>{pool.token1.name}</div>
                   <div><b>Symbol : </b>{pool.token1.symbol}</div>
-                  <div><b>Transaction Count : </b>{pool.token1.txCount}</div>
+                  <div><b>ID : </b>{pool.token1.id}</div>
                 </div>
               </div>
             </div>

@@ -3,6 +3,7 @@ import ListView from './components/ListView'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import React from 'react'
 import SearchResult from './components/SearchResult'
+import Allowance from './components/Allowance'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<SearchResult/>} />
+         <Route path="/allowance" element={<Allowance/>} />
       </Routes>
     </Router>
   )
